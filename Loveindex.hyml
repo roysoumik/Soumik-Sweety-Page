@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soumik & Sweety</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6f0;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      color: #c0392b;
+    }
+    section {
+      margin: 20px auto;
+      max-width: 700px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .countdown {
+      font-size: 1.5em;
+      color: #27ae60;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Soumik & Sweety</h1>
+  <p>Our Story, A Love Letter, and a Countdown to Forever</p>
+</header>
+
+<section>
+  <h2>Our Story</h2>
+  <p>
+    It all started with an overnight journey from Bangalore to a small town called Champua. With excitement in my heart and a bit of nervous energy, I arrived to meet someone who had already taken a place in my thoughts—Sweety. That day, amidst the quiet streets and warm sunshine, a new chapter in our story began. Our first meeting wasn't just a memory; it became the beginning of everything beautiful.
+  </p>
+</section>
+
+<section>
+  <h2>My Love Letter to You</h2>
+  <p>
+    Dear Sweety,  
+    <br><br>
+    From the first moment we met, I knew my life was about to change. Your smile, your warmth, your kindness—it all felt like home. Every day since then, you’ve given me a reason to believe in love, in fate, in us.  
+    <br><br>
+    Thank you for being the light in my life, for making every ordinary moment extraordinary. I look forward to countless more days, memories, and journeys—with you by my side.  
+    <br><br>
+    Forever yours,  
+    <br>
+    Soumik
+  </p>
+</section>
+
+<section>
+  <h2>Countdown to Our Special Day</h2>
+  <div class="countdown" id="countdown">
+    Loading countdown...
+  </div>
+</section>
+
+<script>
+  const targetDate = new Date("2025-01-11T00:00:00");
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("countdown").innerText = "The day is here! Happy Anniversary!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerText = 
+      `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
