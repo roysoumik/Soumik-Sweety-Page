@@ -64,7 +64,7 @@
 </section>
 
 <section>
-  <h2>Countdown to Our Special Day</h2>
+  <h2>Countdown to Our Day</h2>
   <div class="countdown" id="countdown">
     Loading countdown...
   </div>
@@ -78,7 +78,7 @@
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      document.getElementById("countdown").innerText = "The day is here! Happy Anniversary!";
+      document.getElementById("countdown").innerText = "The day is here! !";
       return;
     }
 
